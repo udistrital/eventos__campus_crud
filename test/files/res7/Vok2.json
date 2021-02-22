@@ -1,0 +1,11 @@
+{
+  "title": "Example Schema",
+  "type": "object",
+  "properties": {
+    "CalendarioEvento": { "type": "CalendarioEvento" },
+    "EncargadosEvento": { "type": "[]EncargadoEvento" },
+    "TiposPublico": { "type": "[]TipoPublico" },
+    "EncargadosEventoBorrados": { "type": "[]EncargadoEvento" },
+    "TiposPublicoBorrados": { "type": "[]TipoPublico" }
+  }
+}

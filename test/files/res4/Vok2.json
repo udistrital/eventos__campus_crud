@@ -1,0 +1,15 @@
+{
+  "title": "Example Schema",
+  "type": "object",
+  "properties": {
+    "Id": { "type": "integer" },
+    "Nombre": { "type": "string" },
+    "Descripcion": { "type": "string" },
+    "CodigoAbreviacion": { "type": "string" },
+    "DependenciaId": { "type": "integer" },
+    "Activo": { "type": "boolean" },
+    "FechaCreacion": { "type": "string" },
+    "FechaModificacion": { "type": "string" },
+    "TipoRecurrenciaId": { "type": "TipoRecurrencia" }
+  }
+}

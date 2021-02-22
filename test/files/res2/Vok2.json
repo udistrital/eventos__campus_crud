@@ -1,0 +1,13 @@
+{
+  "title": "Example Schema",
+  "type": "object",
+  "properties": {
+    "Id": { "type": "integer" },
+    "EncargadoId": { "type": "integer" },
+    "Activo": { "type": "boolean" },
+    "FechaCreacion": { "type": "string" },
+    "FechaModificacion": { "type": "string" },
+    "RolEncargadoId": { "type": "RolEncargadoEvento" },
+    "CalendarioEventoId": { "type": "CalendarioEvento" }
+  }
+}
