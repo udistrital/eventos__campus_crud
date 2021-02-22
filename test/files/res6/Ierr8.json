@@ -1,0 +1,24 @@
+{
+	"Development": null,
+	"Message": "The request contains incorrect syntax",
+	"Status": "400",
+	"System": {
+		"Severity": "ERROR",
+		"Code": "23505",
+		"Message": "llave duplicada viola restricción de unicidad «pk_tipo_recurrencia»",
+		"Detail": "Ya existe la llave (id)=(0).",
+		"Hint": "",
+		"Position": "",
+		"InternalPosition": "",
+		"InternalQuery": "",
+		"Where": "",
+		"Schema": "eventos",
+		"Table": "tipo_recurrencia",
+		"Column": "",
+		"DataTypeName": "",
+		"Constraint": "pk_tipo_recurrencia",
+		"File": "nbtinsert.c",
+		"Line": "434",
+		"Routine": "_bt_check_unique"
+	}
+}

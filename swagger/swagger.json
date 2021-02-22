@@ -1,0 +1,1472 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "beego Eventos Crud",
+        "description": "beego has a very cool tools to autogenerate documents for your API",
+        "version": "1.0.0",
+        "termsOfService": "http://beego.me/",
+        "contact": {
+            "email": "astaxie@gmail.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        }
+    },
+    "basePath": "/v1",
+    "paths": {
+        "/calendario_evento/": {
+            "get": {
+                "tags": [
+                    "calendario_evento"
+                ],
+                "description": "get CalendarioEvento",
+                "operationId": "CalendarioEventoController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.CalendarioEvento"
+                        }
+                    },
+                    "404": {
+                        "description": "not found resource"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "calendario_evento"
+                ],
+                "description": "create CalendarioEvento",
+                "operationId": "CalendarioEventoController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for CalendarioEvento content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.CalendarioEvento"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.CalendarioEvento"
+                    },
+                    "400": {
+                        "description": "the request contains incorrect syntax"
+                    }
+                }
+            }
+        },
+        "/calendario_evento/{id}": {
+            "get": {
+                "tags": [
+                    "calendario_evento"
+                ],
+                "description": "get CalendarioEvento by id",
+                "operationId": "CalendarioEventoController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.CalendarioEvento"
+                        }
+                    },
+                    "404": {
+                        "description": "not found resource"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "calendario_evento"
+                ],
+                "description": "update the CalendarioEvento",
+                "operationId": "CalendarioEventoController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for CalendarioEvento content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.CalendarioEvento"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.CalendarioEvento"
+                        }
+                    },
+                    "400": {
+                        "description": "the request contains incorrect syntax"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "calendario_evento"
+                ],
+                "description": "delete the CalendarioEvento",
+                "operationId": "CalendarioEventoController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "404": {
+                        "description": "not found resource"
+                    }
+                }
+            }
+        },
+        "/encargado_evento/": {
+            "get": {
+                "tags": [
+                    "encargado_evento"
+                ],
+                "description": "get EncargadoEvento",
+                "operationId": "EncargadoEventoController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.EncargadoEvento"
+                        }
+                    },
+                    "404": {
+                        "description": "not found resource"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "encargado_evento"
+                ],
+                "description": "create EncargadoEvento",
+                "operationId": "EncargadoEventoController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for EncargadoEvento content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.EncargadoEvento"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.EncargadoEvento"
+                    },
+                    "400": {
+                        "description": "the request contains incorrect syntax"
+                    }
+                }
+            }
+        },
+        "/encargado_evento/{id}": {
+            "get": {
+                "tags": [
+                    "encargado_evento"
+                ],
+                "description": "get EncargadoEvento by id",
+                "operationId": "EncargadoEventoController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.EncargadoEvento"
+                        }
+                    },
+                    "404": {
+                        "description": "not found resource"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "encargado_evento"
+                ],
+                "description": "update the EncargadoEvento",
+                "operationId": "EncargadoEventoController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for EncargadoEvento content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.EncargadoEvento"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.EncargadoEvento"
+                        }
+                    },
+                    "400": {
+                        "description": "the request contains incorrect syntax"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "encargado_evento"
+                ],
+                "description": "delete the EncargadoEvento",
+                "operationId": "EncargadoEventoController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "404": {
+                        "description": "not found resource"
+                    }
+                }
+            }
+        },
+        "/rol_encargado_evento/": {
+            "get": {
+                "tags": [
+                    "rol_encargado_evento"
+                ],
+                "description": "get RolEncargadoEvento",
+                "operationId": "RolEncargadoEventoController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.RolEncargadoEvento"
+                        }
+                    },
+                    "404": {
+                        "description": "not found resource"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "rol_encargado_evento"
+                ],
+                "description": "create RolEncargadoEvento",
+                "operationId": "RolEncargadoEventoController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for RolEncargadoEvento content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.RolEncargadoEvento"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.RolEncargadoEvento"
+                    },
+                    "400": {
+                        "description": "the request contains incorrect syntax"
+                    }
+                }
+            }
+        },
+        "/rol_encargado_evento/{id}": {
+            "get": {
+                "tags": [
+                    "rol_encargado_evento"
+                ],
+                "description": "get RolEncargadoEvento by id",
+                "operationId": "RolEncargadoEventoController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.RolEncargadoEvento"
+                        }
+                    },
+                    "404": {
+                        "description": "not found resource"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "rol_encargado_evento"
+                ],
+                "description": "update the RolEncargadoEvento",
+                "operationId": "RolEncargadoEventoController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for RolEncargadoEvento content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.RolEncargadoEvento"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.RolEncargadoEvento"
+                        }
+                    },
+                    "400": {
+                        "description": "the request contains incorrect syntax"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "rol_encargado_evento"
+                ],
+                "description": "delete the RolEncargadoEvento",
+                "operationId": "RolEncargadoEventoController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "404": {
+                        "description": "not found resource"
+                    }
+                }
+            }
+        },
+        "/tipo_evento/": {
+            "get": {
+                "tags": [
+                    "tipo_evento"
+                ],
+                "description": "get TipoEvento",
+                "operationId": "TipoEventoController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.TipoEvento"
+                        }
+                    },
+                    "404": {
+                        "description": "not found resource"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "tipo_evento"
+                ],
+                "description": "create TipoEvento",
+                "operationId": "TipoEventoController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for TipoEvento content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.TipoEvento"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.TipoEvento"
+                    },
+                    "400": {
+                        "description": "the request contains incorrect syntax"
+                    }
+                }
+            }
+        },
+        "/tipo_evento/{id}": {
+            "get": {
+                "tags": [
+                    "tipo_evento"
+                ],
+                "description": "get TipoEvento by id",
+                "operationId": "TipoEventoController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.TipoEvento"
+                        }
+                    },
+                    "404": {
+                        "description": "not found resource"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "tipo_evento"
+                ],
+                "description": "update the TipoEvento",
+                "operationId": "TipoEventoController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for TipoEvento content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.TipoEvento"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.TipoEvento"
+                        }
+                    },
+                    "400": {
+                        "description": "the request contains incorrect syntax"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "tipo_evento"
+                ],
+                "description": "delete the TipoEvento",
+                "operationId": "TipoEventoController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "404": {
+                        "description": "not found resource"
+                    }
+                }
+            }
+        },
+        "/tipo_publico/": {
+            "get": {
+                "tags": [
+                    "tipo_publico"
+                ],
+                "description": "get TipoPublico",
+                "operationId": "TipoPublicoController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.TipoPublico"
+                        }
+                    },
+                    "404": {
+                        "description": "not found resource"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "tipo_publico"
+                ],
+                "description": "create TipoPublico",
+                "operationId": "TipoPublicoController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for TipoPublico content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.TipoPublico"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.TipoPublico"
+                    },
+                    "400": {
+                        "description": "the request contains incorrect syntax"
+                    }
+                }
+            }
+        },
+        "/tipo_publico/{id}": {
+            "get": {
+                "tags": [
+                    "tipo_publico"
+                ],
+                "description": "get TipoPublico by id",
+                "operationId": "TipoPublicoController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.TipoPublico"
+                        }
+                    },
+                    "404": {
+                        "description": "not found resource"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "tipo_publico"
+                ],
+                "description": "update the TipoPublico",
+                "operationId": "TipoPublicoController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for TipoPublico content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.TipoPublico"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.TipoPublico"
+                        }
+                    },
+                    "400": {
+                        "description": "the request contains incorrect syntax"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "tipo_publico"
+                ],
+                "description": "delete the TipoPublico",
+                "operationId": "TipoPublicoController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "404": {
+                        "description": "not found resource"
+                    }
+                }
+            }
+        },
+        "/tipo_recurrencia/": {
+            "get": {
+                "tags": [
+                    "tipo_recurrencia"
+                ],
+                "description": "get TipoRecurrencia",
+                "operationId": "TipoRecurrenciaController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.TipoRecurrencia"
+                        }
+                    },
+                    "404": {
+                        "description": "not found resource"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "tipo_recurrencia"
+                ],
+                "description": "create TipoRecurrencia",
+                "operationId": "TipoRecurrenciaController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for TipoRecurrencia content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.TipoRecurrencia"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.TipoRecurrencia"
+                    },
+                    "400": {
+                        "description": "the request contains incorrect syntax"
+                    }
+                }
+            }
+        },
+        "/tipo_recurrencia/{id}": {
+            "get": {
+                "tags": [
+                    "tipo_recurrencia"
+                ],
+                "description": "get TipoRecurrencia by id",
+                "operationId": "TipoRecurrenciaController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.TipoRecurrencia"
+                        }
+                    },
+                    "404": {
+                        "description": "not found resource"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "tipo_recurrencia"
+                ],
+                "description": "update the TipoRecurrencia",
+                "operationId": "TipoRecurrenciaController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for TipoRecurrencia content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.TipoRecurrencia"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.TipoRecurrencia"
+                        }
+                    },
+                    "400": {
+                        "description": "the request contains incorrect syntax"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "tipo_recurrencia"
+                ],
+                "description": "delete the TipoRecurrencia",
+                "operationId": "TipoRecurrenciaController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "404": {
+                        "description": "not found resource"
+                    }
+                }
+            }
+        },
+        "/tr_evento/": {
+            "post": {
+                "tags": [
+                    "tr_evento"
+                ],
+                "description": "create the TrEvento",
+                "operationId": "TrEventoController.PostTrEvento",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for TrEvento content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.TrEvento"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.TrEvento"
+                    },
+                    "400": {
+                        "description": "the request contains incorrect syntax"
+                    }
+                }
+            }
+        },
+        "/tr_evento/{id}": {
+            "put": {
+                "tags": [
+                    "tr_evento"
+                ],
+                "description": "update the TrEvento",
+                "operationId": "TrEventoController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for TrEvento content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.TrEventoPut"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.TrEventoPut"
+                        }
+                    },
+                    "400": {
+                        "description": "the request contains incorrect syntax"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "tr_evento"
+                ],
+                "description": "delete the Evento",
+                "operationId": "TrEventoController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "404": {
+                        "description": "not found resource"
+                    }
+                }
+            }
+        },
+        "/tr_evento/{persona}": {
+            "get": {
+                "tags": [
+                    "tr_evento"
+                ],
+                "description": "get TrEventoController",
+                "operationId": "TrEventoController.Get All By Persona",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "Persona",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.TrEventoController"
+                        }
+                    },
+                    "404": {
+                        "description": "not found resource"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "19280.\u003cnil\u003e.EncargadoEvento": {
+            "title": "EncargadoEvento",
+            "type": "object"
+        },
+        "19317.\u003cnil\u003e.TipoPublico": {
+            "title": "TipoPublico",
+            "type": "object"
+        },
+        "19431.\u003cnil\u003e.EncargadoEvento": {
+            "title": "EncargadoEvento",
+            "type": "object"
+        },
+        "19476.\u003cnil\u003e.TipoPublico": {
+            "title": "TipoPublico",
+            "type": "object"
+        },
+        "19517.\u003cnil\u003e.EncargadoEvento": {
+            "title": "EncargadoEvento",
+            "type": "object"
+        },
+        "19562.\u003cnil\u003e.TipoPublico": {
+            "title": "TipoPublico",
+            "type": "object"
+        },
+        "models.CalendarioEvento": {
+            "title": "CalendarioEvento",
+            "type": "object",
+            "properties": {
+                "Activo": {
+                    "type": "boolean"
+                },
+                "Descripcion": {
+                    "type": "string"
+                },
+                "EventoPadreId": {
+                    "$ref": "#/definitions/models.CalendarioEvento"
+                },
+                "FechaCreacion": {
+                    "type": "string"
+                },
+                "FechaFin": {
+                    "type": "string",
+                    "format": "datetime"
+                },
+                "FechaInicio": {
+                    "type": "string",
+                    "format": "datetime"
+                },
+                "FechaModificacion": {
+                    "type": "string"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "PeriodoId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "TipoEventoId": {
+                    "$ref": "#/definitions/models.TipoEvento"
+                }
+            }
+        },
+        "models.EncargadoEvento": {
+            "title": "EncargadoEvento",
+            "type": "object",
+            "properties": {
+                "Activo": {
+                    "type": "boolean"
+                },
+                "CalendarioEventoId": {
+                    "$ref": "#/definitions/models.CalendarioEvento"
+                },
+                "EncargadoId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "FechaCreacion": {
+                    "type": "string"
+                },
+                "FechaModificacion": {
+                    "type": "string"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "RolEncargadoId": {
+                    "$ref": "#/definitions/models.RolEncargadoEvento"
+                }
+            }
+        },
+        "models.RolEncargadoEvento": {
+            "title": "RolEncargadoEvento",
+            "type": "object",
+            "properties": {
+                "Activo": {
+                    "type": "boolean"
+                },
+                "CodigoAbreviacion": {
+                    "type": "string"
+                },
+                "Descripcion": {
+                    "type": "string"
+                },
+                "FechaCreacion": {
+                    "type": "string"
+                },
+                "FechaModificacion": {
+                    "type": "string"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Nombre": {
+                    "type": "string"
+                },
+                "NumeroOrden": {
+                    "type": "number",
+                    "format": "double"
+                }
+            }
+        },
+        "models.TipoEvento": {
+            "title": "TipoEvento",
+            "type": "object",
+            "properties": {
+                "Activo": {
+                    "type": "boolean"
+                },
+                "CodigoAbreviacion": {
+                    "type": "string"
+                },
+                "DependenciaId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Descripcion": {
+                    "type": "string"
+                },
+                "FechaCreacion": {
+                    "type": "string"
+                },
+                "FechaModificacion": {
+                    "type": "string"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Nombre": {
+                    "type": "string"
+                },
+                "TipoRecurrenciaId": {
+                    "$ref": "#/definitions/models.TipoRecurrencia"
+                }
+            }
+        },
+        "models.TipoPublico": {
+            "title": "TipoPublico",
+            "type": "object",
+            "properties": {
+                "Activo": {
+                    "type": "boolean"
+                },
+                "CalendarioEventoId": {
+                    "$ref": "#/definitions/models.CalendarioEvento"
+                },
+                "CodigoAbreviacion": {
+                    "type": "string"
+                },
+                "FechaCreacion": {
+                    "type": "string"
+                },
+                "FechaModificacion": {
+                    "type": "string"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Nombre": {
+                    "type": "string"
+                },
+                "NumeroOrden": {
+                    "type": "number",
+                    "format": "double"
+                }
+            }
+        },
+        "models.TipoRecurrencia": {
+            "title": "TipoRecurrencia",
+            "type": "object",
+            "properties": {
+                "Activo": {
+                    "type": "boolean"
+                },
+                "CodigoAbreviacion": {
+                    "type": "string"
+                },
+                "Descripcion": {
+                    "type": "string"
+                },
+                "FechaCreacion": {
+                    "type": "string"
+                },
+                "FechaModificacion": {
+                    "type": "string"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Nombre": {
+                    "type": "string"
+                },
+                "NumeroOrden": {
+                    "type": "number",
+                    "format": "double"
+                }
+            }
+        },
+        "models.TrEvento": {
+            "title": "TrEvento",
+            "type": "object",
+            "properties": {
+                "CalendarioEvento": {
+                    "$ref": "#/definitions/models.CalendarioEvento"
+                },
+                "EncargadosEvento": {
+                    "$ref": "#/definitions/19280.\u003cnil\u003e.EncargadoEvento"
+                },
+                "TiposPublico": {
+                    "$ref": "#/definitions/19317.\u003cnil\u003e.TipoPublico"
+                }
+            }
+        },
+        "models.TrEventoController": {
+            "title": "TrEventoController",
+            "type": "object"
+        },
+        "models.TrEventoPut": {
+            "title": "TrEventoPut",
+            "type": "object",
+            "properties": {
+                "CalendarioEvento": {
+                    "$ref": "#/definitions/models.CalendarioEvento"
+                },
+                "EncargadosEvento": {
+                    "$ref": "#/definitions/19431.\u003cnil\u003e.EncargadoEvento"
+                },
+                "EncargadosEventoBorrados": {
+                    "$ref": "#/definitions/19517.\u003cnil\u003e.EncargadoEvento"
+                },
+                "TiposPublico": {
+                    "$ref": "#/definitions/19476.\u003cnil\u003e.TipoPublico"
+                },
+                "TiposPublicoBorrados": {
+                    "$ref": "#/definitions/19562.\u003cnil\u003e.TipoPublico"
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "calendario_evento",
+            "description": "CalendarioEventoController operations for CalendarioEvento\n"
+        },
+        {
+            "name": "tipo_recurrencia",
+            "description": "TipoRecurrenciaController operations for TipoRecurrencia\n"
+        },
+        {
+            "name": "tipo_evento",
+            "description": "TipoEventoController operations for TipoEvento\n"
+        },
+        {
+            "name": "rol_encargado_evento",
+            "description": "RolEncargadoEventoController operations for RolEncargadoEvento\n"
+        },
+        {
+            "name": "encargado_evento",
+            "description": "EncargadoEventoController operations for EncargadoEvento\n"
+        },
+        {
+            "name": "tipo_publico",
+            "description": "TipoPublicoController operations for TipoPublico\n"
+        },
+        {
+            "name": "tr_evento",
+            "description": "operations for TrEvento\n"
+        }
+    ]
+}

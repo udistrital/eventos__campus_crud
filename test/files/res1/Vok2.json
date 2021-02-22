@@ -1,0 +1,16 @@
+{
+  "title": "Example Schema",
+  "type": "object",
+  "properties": {
+    "Id": { "type": "integer" },
+    "Descripcion": { "type": "string" },
+    "PeriodoId": { "type": "integer" },
+    "EventoPadreId": { "type": "CalendarioEvento" },
+    "Activo": { "type": "boolean" },
+    "FechaInicio": { "type": "string" },
+    "FechaFin": { "type": "string" },
+    "TipoEventoId": { "type": "TipoEvento" },
+    "FechaCreacion": { "type": "string" },
+    "FechaModificacion": { "type": "string" }
+  }
+}
