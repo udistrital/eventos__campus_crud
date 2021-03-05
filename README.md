@@ -25,6 +25,9 @@ Definir los valores de las siguientes variables de entorno:
  - `EVENTOS_CAMPUS_CRUD__PGURLS`: Host de conexión
  - `EVENTOS_CAMPUS_CRUD__PGDB`: Nombre de la base de datos
  - `EVENTOS_CAMPUS_CRUD__SCHEMA`: Esquema a utilizar en la base de datos
+ 
+## Pruebas
+En Proceso
 
 ## Ejemplo
 EVENTOS_HTTP_PORT=8081 EVENTOS_CAMPUS_CRUD__PGUSER=user EVENTOS_CAMPUS_CRUD__PGPASS=password EVENTOS_CAMPUS_CRUD__PGURLS=localhost EVENTOS_CAMPUS_CRUD__PGDB=bd EVENTOS_CAMPUS_CRUD__SCHEMA=schema_new bee run
