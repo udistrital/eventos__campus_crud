@@ -10,6 +10,7 @@ import (
 	"github.com/udistrital/auditoria"
 	apistatus "github.com/udistrital/utils_oas/apiStatusLib"
 	"github.com/udistrital/utils_oas/customerror"
+	"github.com/udistrital/utils_oas/xray"
 )
 
 func init() {
@@ -35,7 +36,7 @@ func main() {
 		ExposeHeaders:    []string{"Content-Length"},
 		AllowCredentials: true,
 	}))
-
+	xray.InitXRay()
 	apistatus.Init()
 	auditoria.InitMiddleware()
 	beego.ErrorController(&customerror.CustomErrorController{})
